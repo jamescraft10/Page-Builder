@@ -1,0 +1,83 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.display {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(70vw - 5px);
+    height: 100vh;
+
+    overflow: hidden;
+    border: none;
+
+    background-color: rgba(202, 202, 202, 0.925);
+    color: rgb(224, 224, 224);
+}
+
+#htmlInput {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    width: 30%;
+    height: 100vh;
+    min-width: 30%;
+    max-width: 30%;
+    min-height: 100vh;
+    max-height: 100vh;
+    border-top: none;
+    border-right: 5px rgb(77, 77, 77) solid;
+    border-bottom: none;
+    border-left: none;
+
+    resize: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0);
+    caret-color: rgb(255, 255, 255);
+    overflow: scroll;
+
+    text-wrap: nowrap;
+    font-size: medium;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#codeDisplay {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+
+    width: 30%;
+    height: 100vh;
+    min-width: 30%;
+    max-width: 30%;
+    min-height: 100vh;
+    max-height: 100vh;
+    border-top: none;
+    border-right: 5px rgb(77, 77, 77) solid;
+    border-bottom: none;
+    border-left: none;
+
+    resize: none;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    overflow: scroll;
+
+    text-wrap: nowrap;
+    font-size: medium;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Builder | App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+
+    <style id="theme">
+        @import url("../Styles/Themes/black.css");
+    </style>
+</head>
+<body>
+    <button tabindex="-1">Import</button>
+    <button tabindex="-1">Export</button>
+    <textarea id="htmlInput" autocapitalize="off" spellcheck="false" tabindex="-1" onkeydown="
+    if(event.keyCode===9) {
+        var v=this.value,s=this.selectionStart,e=this.selectionEnd;
+        this.value=v.substring(0, s)+'    '+v.substring(e);
+        this.selectionStart=this.selectionEnd=s+4;
+        return false;
+    }
+
+    //if(event.keyCode===13) {
+    //    var v=this.value,s=this.selectionStart,e=this.selectionEnd;
+    //    this.value=v.substring(0, s)+'\n    '+v.substring(e);
+    //    this.selectionStart=this.selectionEnd=s+5;
+    //    return false;
+    //}
+    " onkeyup="
+    UpdateSyntax();
+    UpdateHTML();
+    "></textarea>
+    <code class="htmlInput" id="codeDisplay"></code>
+
+
+    <iframe class="display" href="about:blank" tabindex="-1"></iframe>
+
+    <!-- Prompt for import -->
+    <dialog id="ImportDialog">
+        <h3>Paste HTML/HTMLJS here</h3>
+        <textarea></textarea>
+    </dialog>
+
+    <script src="../Scripts/app/app.js"></script>
+</body>
+</html>
