@@ -37,19 +37,29 @@ html, body {
     border-right: 5px rgb(77, 77, 77) solid;
     border-bottom: none;
     border-left: none;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    padding-right: 0;
 
     resize: none;
     background-color: rgba(255, 255, 255, 0);
     color: rgba(255, 255, 255, 0);
     caret-color: rgb(255, 255, 255);
-    overflow: scroll;
+    overflow: auto;
 
     text-wrap: nowrap;
-    font-size: medium;
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-style: normal;
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
+}
+
+#htmlInput:focus {
+    outline: 0 none;
+    box-shadow: none;
 }
 
 #codeDisplay {
@@ -68,16 +78,21 @@ html, body {
     border-right: 5px rgb(77, 77, 77) solid;
     border-bottom: none;
     border-left: none;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    padding-right: 0;
 
     resize: none;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    overflow: scroll;
+    overflow: hidden;
 
     text-wrap: nowrap;
-    font-size: medium;
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-style: normal;
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
 }

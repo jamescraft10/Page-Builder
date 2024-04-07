@@ -38,8 +38,20 @@
     " onkeyup="
     UpdateSyntax();
     UpdateHTML();
+    "
+    onscroll="
+    document.getElementById('codeDisplay').scrollTop = this.scrollTop;
+    document.getElementById('codeDisplay').scrollLeft = this.scrollLeft;
+    if(this.scrollTop + this.clientHeight === this.scrollHeight) { // when at bottom move up because scroll go down
+        console.log('hi');
+        document.getElementById('htmlInput').style.paddingTop = '21px'; // scrolling is really stupid
+    } else {
+        document.getElementById('htmlInput').style.paddingTop = '3px';
+    }
     "></textarea>
-    <code class="htmlInput" id="codeDisplay"></code>
+    <pre>
+        <code class="htmlInput" id="codeDisplay"></code>
+    </pre>
 
 
     <iframe class="display" href="about:blank" tabindex="-1"></iframe>
@@ -50,6 +62,6 @@
         <textarea></textarea>
     </dialog>
 
-    <script src="../Scripts/app/app.js"></script>
+    <script src="../Scripts/app.js"></script>
 </body>
 </html>
